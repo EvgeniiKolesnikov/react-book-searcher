@@ -13,8 +13,11 @@
       filter: brightness(88%);
     }
     .book-card__title { 
-      color: var(--book-card__title--active);
+      color: var(--book-card__title--hover);
     }
+    .book-card__author {
+      color: var(--book-card__author--hover);
+    } 
   }
 }
 
@@ -36,7 +39,7 @@
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 2px 0px;
   pointer-events: none;
-  max-height: 30px;
+  max-height: 28px;
   overflow: hidden;
   font-size: 12px;
   font-weight: 400;
