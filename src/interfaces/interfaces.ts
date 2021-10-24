@@ -29,7 +29,7 @@ export interface IBooksList {
   booksList: IBookCard[];
 }
 
-export interface IData {
+export interface IBooksData {
   docs: IBookCard[];
   numFound: number;
   numFoundExact: boolean;

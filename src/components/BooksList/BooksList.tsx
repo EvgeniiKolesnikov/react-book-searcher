@@ -1,13 +1,33 @@
-import { BookCard, Scroll } from '..';
-import { IBooksList } from '../../interfaces/interfaces';
-import styles from './BooksList.module.scss';
+import { useEffect } from 'react';
+import { BookCard, Preloader, Scroll } from '..';
+import { useActions } from '../../hooks/useActions';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { Error } from '../Error/Error';
+import './BooksList.scss';
 
-export const BooksList: React.FC<IBooksList> = ({ booksList }) => {
+export const BooksList: React.FC = () => {
+  const { data, loading, error } = useTypedSelector((state) => state.data);
+  const { fetchData } = useActions();
+
+  console.log('data: ', data);
+  console.log('loading: ', loading);
+  console.log('error: ', error);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (error) {
+    return <h2 className=''>{error}</h2>;
+  }
+
   return (
-    <div className={styles['books-list']}>
+    <div className='books-list'>
       <Scroll>
-        <div className={styles['books-list__container']}>
-          {booksList.map((book) => (
+        <div className='books-list__container'>
+          {loading && <Preloader />}
+          {/* {error && <Error />} */}
+          {data?.docs.map((book) => (
             <BookCard {...book} />
           ))}
         </div>
