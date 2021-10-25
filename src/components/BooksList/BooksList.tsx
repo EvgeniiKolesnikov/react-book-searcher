@@ -17,16 +17,12 @@ export const BooksList: React.FC = () => {
     fetchData();
   }, []);
 
-  if (error) {
-    return <h2 className=''>{error}</h2>;
-  }
-
   return (
     <div className='books-list'>
       <Scroll>
         <div className='books-list__container'>
           {loading && <Preloader />}
-          {/* {error && <Error />} */}
+          {error && <Error error={error} />}
           {data?.docs.map((book) => (
             <BookCard {...book} />
           ))}

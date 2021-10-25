@@ -1,11 +1,15 @@
 import './Error.scss';
 
-export const Error: React.FC = (props) => {
-  console.log(props);
+interface IError { 
+  error: string;
+}
+
+export const Error: React.FC<IError> = ({ error }) => {
+  console.log(error);
   
   return (
     <div className='error'>
-      <div className='error-message'>{props}</div>
+      <div className='error-message'>{error}</div>
     </div>
   );
 };
