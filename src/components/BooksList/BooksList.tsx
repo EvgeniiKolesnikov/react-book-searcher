@@ -20,7 +20,6 @@ export const BooksList: React.FC = () => {
   return (
     <Scroll>
       <div className='books-list'>
-      <div className='books-list__spacer' />
         <div className='books-list__container'>
           {loading && <Preloader />}
           {error && <Error error={error} />}

@@ -2,16 +2,12 @@
   padding: 0 10px;
   width: 100%;
   max-width: 720px;
-  &__spacer {
-    height: 10px;
-    width: 100%;
-    color: var(--bg-color);
-  }
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
     grid-gap: 1.1rem;
     justify-content: space-between;
+    margin-top: 10px;
   }
   @media screen and (max-width:740px) {
     max-width: 640px;
