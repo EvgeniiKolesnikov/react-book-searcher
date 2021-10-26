@@ -45,7 +45,9 @@
   ::-webkit-search-decoration,
   ::-webkit-search-cancel-button,
   ::-webkit-search-results-button,
-  ::-webkit-search-results-decoration { display: none; }
+  ::-webkit-search-results-decoration {
+    display: none;
+  }
 }
 
 .input__control {
@@ -123,4 +125,8 @@
   &:focus-within {
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.08);
   }
+}
+
+@media screen and (max-width: 480px) {
+
 }

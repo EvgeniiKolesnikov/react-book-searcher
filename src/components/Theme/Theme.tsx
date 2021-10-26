@@ -9,10 +9,10 @@ export const Theme: React.FC = () => {
   const changeTheme = () => {
     icon === 'sun' ? setIcon('moon') : setIcon('sun');
     // console.log('icon', icon);
-  }
+  };
 
   return (
-    <div className='theme' onClick={changeTheme}>
+    <div className='theme' onClick={changeTheme} title='Change color theme'>
       <div className={`theme__icon ${icon}`}>
         <img className='theme__img' src={SunLogo} alt='SunLogo' />
         <img className='theme__img' src={MoonLogo} alt='MoonLogo' />

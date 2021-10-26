@@ -18,8 +18,9 @@ export const BooksList: React.FC = () => {
   }, []);
 
   return (
-    <div className='books-list'>
-      <Scroll>
+    <Scroll>
+      <div className='books-list'>
+      <div className='books-list__spacer' />
         <div className='books-list__container'>
           {loading && <Preloader />}
           {error && <Error error={error} />}
@@ -27,7 +28,7 @@ export const BooksList: React.FC = () => {
             <BookCard {...book} />
           ))}
         </div>
-      </Scroll>
-    </div>
+      </div>
+    </Scroll>
   );
 };

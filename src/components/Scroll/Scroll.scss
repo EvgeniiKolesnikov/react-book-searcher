@@ -1,8 +1,9 @@
 .scroll {
   height: calc(100vh - 60px);
-  // margin: 0px 3px 0px 10px;
-  /* margin: 0px 0px 0px 0px; */
-  padding: 0px 0px 0px 0px;
+  margin: 0 3px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   overflow: overlay;
   position: relative;
 }

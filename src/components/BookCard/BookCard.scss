@@ -12,12 +12,20 @@
       // filter: opacity(70%);
       filter: brightness(88%);
     }
-    .book-card__title { 
+    .book-card__title {
       color: var(--book-card__title--hover);
     }
     .book-card__author {
       color: var(--book-card__author--hover);
-    } 
+    }
+  }
+  @media screen and (max-width: 364px) {
+    width: 35vw;
+    height: auto;
+  }
+  @media screen and (max-width: 250px) {
+    width: 86vw;
+    height: auto;
   }
 }
 
@@ -55,4 +63,4 @@
   overflow: hidden;
   font-size: 12px;
   color: var(--book-card__author);
-} 
+}
