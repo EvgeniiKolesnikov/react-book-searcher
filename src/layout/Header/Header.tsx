@@ -1,10 +1,14 @@
-import styles from './Header.module.scss';
+import { Logo, SearchBar, Theme } from '../../components';
+import './Header.scss';
 
 export const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.header__container}>
-        <h1 className={styles.header__title}>Book Searcher</h1>
+    <header className='header'>
+      <div className='header__container'>
+        <Logo />
+        <div className='header__title'>Book Searcher</div>
+        <Theme />
+        <SearchBar />
       </div>
     </header>
   );

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { BookCard, Preloader, Scroll } from '..';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { Error } from '../Error/Error';
+import { BookCard, Error, Preloader, Scroll } from '..';
+
 import './BooksList.scss';
 
 export const BooksList: React.FC = () => {

@@ -1,11 +1,13 @@
 .main {
-  padding-top: 34px;
+  padding-top: 3rem;
   &__container {
-    max-width: 720px;
+    max-width: 1080px;
     height: 100%;
+    display: flex;
     margin: 0 auto;
+    padding: 0 2px;
     // display: flex;
     // align-items: center;
-    // justify-content: center;
+    justify-content: center;
   }
 }

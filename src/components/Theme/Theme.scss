@@ -1,0 +1,33 @@
+.theme {
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 1px solid var(--theme-button-border);
+  cursor: pointer;
+  overflow: hidden;
+  // filter: opacity(50%);
+  &:hover {
+    border: 1px solid var(--theme-button-border-hover);
+  }
+  &__img {
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.theme__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  &.sun {
+    transform: translate(0%);
+  }
+  &.moon {
+    transform: translate(-100%);
+  }
+}

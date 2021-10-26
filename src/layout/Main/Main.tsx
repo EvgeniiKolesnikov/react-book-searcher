@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BooksList, Preloader, SearchBar } from '../../components';
 import { IBookCard, IBooksData } from '../../interfaces/interfaces';
 import { OpenLibraryService } from '../../services/OpenLibraryService';
-import styles from './Main.module.scss';
+import './Main.scss';
 
 export const Main: React.FC = ({children}) => {
   // const [booksList, setBooksList] = useState<IBookCard[]>([]);
@@ -21,9 +21,9 @@ export const Main: React.FC = ({children}) => {
     // console.log(data.docs);
   };
   return (
-    <main className={styles.main}>
-      <div className={styles.main__container}>
-        <SearchBar onSearch={handleSearch} />
+    <main className='main'>
+      <div className='main__container'>
+        {/* <SearchBar onSearch={handleSearch} /> */}
         {children}
         {/* {booksList.length > 0 && <BooksList booksList={booksList} />} */}
       </div> 
