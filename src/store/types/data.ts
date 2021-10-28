@@ -5,13 +5,15 @@ export interface IDataState {
   loading: boolean;
   error: string | null;
   page: number;
-  querry: string;
+  query: string;
 }
 
 export enum DataActionTypes {
   FETCH_DATA_LOADING = 'FETCH_DATA_LOADING',
   FETCH_DATA_SUCESS = 'FETCH_DATA_SUCESS',
   FETCH_DATA_ERROR = 'FETCH_DATA_ERROR',
+  SET_DATA_QUERY = 'SET_DATA_QUERY',
+  SET_DATA_PAGE = 'SET_DATA_PAGE',
 }
 
 interface FetchDataLoadingAction {
@@ -25,8 +27,18 @@ interface FetchDataErrorAction {
   type: DataActionTypes.FETCH_DATA_ERROR;
   payload: string;
 }
+interface SetDataQueryAction {
+  type: DataActionTypes.SET_DATA_QUERY;
+  payload: string;
+}
+interface SetDataPageAction {
+  type: DataActionTypes.SET_DATA_PAGE;
+  payload: number;
+}
 
 export type DataAction =
   | FetchDataLoadingAction
   | FetchDataSucessAction
-  | FetchDataErrorAction;
+  | FetchDataErrorAction
+  | SetDataQueryAction
+  | SetDataPageAction;

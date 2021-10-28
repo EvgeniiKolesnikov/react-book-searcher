@@ -1,38 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useActions } from '../../hooks/useActions';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
 import './SearchBar.scss';
 
-// interface ISearchBar {
-//   onSearch(searchValue: string): void;
-// }
+export const SearchBar: React.FC = () => {
+  const [value, setValue] = useState('');
+  const { fetchData, setDataQuery } = useActions();
+  const { query, page } = useTypedSelector((state) => state.data);
 
-export const SearchBar: React.FC<any> = () => {
-  const [value, setValue] = useState<string>('');
-  // const [booksList, setBooksList] = useState<IBookCard[]>([]);
-  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  useEffect(() => {
+    fetchData(query, page);
+  }, [query]);
 
-  const onSearch = async (searchValue: string) => {
-    // setBooksList([]);
-    // setIsLoading(true);
-    // const data:IBooksData = await OpenLibraryService.searchBooks(searchValue);
-    // console.log(data);
-    // data.docs.forEach((item: IBookCard) => {
-    //   item.id = item.key.split("/").pop();
-    // });
-    // setBooksList(data.docs);
-    // setIsLoading(false);
-    // console.log(data.docs);
-  };
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      if (value !== query) {
+        setDataQuery(value);
+      }
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [value]);
 
-  const handleKey = (e: React.KeyboardEvent) => {
+  const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      onSearch(value);
-      console.log(value);
+      setDataQuery(value);
     }
-  };
-
-  const handleSubmit = () => {
-    onSearch(value);
-    console.log(value);
   };
 
   return (
@@ -46,7 +40,7 @@ export const SearchBar: React.FC<any> = () => {
           name='search'
           title='Search books'
           value={value}
-          onKeyDown={handleKey}
+          onKeyDown={onKeyDown}
           onChange={(e) => setValue(e.target.value)}
         />
         <div
@@ -59,7 +53,7 @@ export const SearchBar: React.FC<any> = () => {
       <button
         className='input__button'
         id='searchButton'
-        onClick={handleSubmit}
+        onClick={() => setDataQuery(value)}
       >
         Search
       </button>

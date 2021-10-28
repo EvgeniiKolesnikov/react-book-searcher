@@ -1,28 +1,30 @@
-import { useEffect } from 'react';
-import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { BookCard, Error, Preloader, Scroll, ZeroBook } from '..';
 
 import './BooksList.scss';
+import { useEffect } from 'react';
 
 export const BooksList: React.FC = () => {
-  const { data, loading, error } = useTypedSelector((state) => state.data);
-  const { fetchData } = useActions();
-
-  console.log('data: ', data);
-  console.log('loading: ', loading);
-  console.log('error: ', error);
+  const { data, loading, error, query, page } = useTypedSelector(
+    (state) => state.data
+  );
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (!loading) {
+      console.log('data: ', data);
+      console.log('query:', query, 'page:', page);
+      data?.docs.forEach((item) => {
+        item.id = item.key.split('/').pop();
+      });
+    }
+  }, [loading]);
 
   return (
     <Scroll>
       <div className='books-list'>
         {loading && <Preloader />}
         {error && <Error error={error} />}
-        {data?.docs.length === 0 && <ZeroBook />}
+        {data?.docs.length === 0 && query && <ZeroBook />}
         <div className='books-list__container'>
           {data?.docs.map((book) => (
             <BookCard {...book} />
