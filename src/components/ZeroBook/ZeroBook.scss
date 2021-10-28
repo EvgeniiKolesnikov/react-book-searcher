@@ -1,4 +1,4 @@
-.error {
+.zero-book {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -8,7 +8,7 @@
     margin: 10px;
     font-size: 25px;
   }
-  &__message {
+  &__text {
     text-align: center;
     font-size: 15px;
   }

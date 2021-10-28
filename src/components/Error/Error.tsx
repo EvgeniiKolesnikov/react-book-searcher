@@ -5,10 +5,9 @@ interface IError {
 }
 
 export const Error: React.FC<IError> = ({ error }) => {
-  console.log(error);
-  
   return (
     <div className='error'>
+      <div className='error__title'>Ошибка загрузки данных</div>
       <div className='error-message'>{error}</div>
     </div>
   );

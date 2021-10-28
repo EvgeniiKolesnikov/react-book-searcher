@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { BookCard, Error, Preloader, Scroll } from '..';
+import { BookCard, Error, Preloader, Scroll, ZeroBook } from '..';
 
 import './BooksList.scss';
 
@@ -20,9 +20,10 @@ export const BooksList: React.FC = () => {
   return (
     <Scroll>
       <div className='books-list'>
+        {loading && <Preloader />}
+        {error && <Error error={error} />}
+        {data?.docs.length === 0 && <ZeroBook />}
         <div className='books-list__container'>
-          {loading && <Preloader />}
-          {error && <Error error={error} />}
           {data?.docs.map((book) => (
             <BookCard {...book} />
           ))}

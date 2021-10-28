@@ -19,7 +19,7 @@ export const fetchData = () => {
     } catch (error) {
       dispatch({
         type: DataActionTypes.FETCH_DATA_ERROR,
-        payload: `Ошибка загрузки данных: ${error}`,
+        payload: `${error}`,
       });
     }
   };
