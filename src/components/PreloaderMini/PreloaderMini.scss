@@ -1,0 +1,45 @@
+$startPos: 0px;
+$endPos: calc(100% - 20px);
+
+.preloader-mini {
+  height: 5px;
+  width: 100%;
+  max-width: 700px;
+  background-color: #ddd;
+  position: fixed;
+  bottom: 0;
+
+  &:before {
+    content: '';
+    height: 5px;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    background-color: var(--blue);
+    -webkit-animation: preloaderAnim 3s infinite linear;
+    animation: preloaderAnim 3s infinite linear;
+  }
+
+  @media screen and (max-width: 740px) {
+    max-width: 100%;
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes preloaderAnim {
+  0% {
+    left: $startPos;
+  }
+  100% {
+    left: $endPos;
+  }
+}
+
+@keyframes preloaderAnim {
+  0% {
+    left: $startPos;
+  }
+  100% {
+    left: $endPos;
+  }
+}
