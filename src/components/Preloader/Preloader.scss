@@ -101,23 +101,3 @@ $movement: (
     animation: moveBox-#{$i} $animTime infinite;
   }
 }
-
-////////////////////////////////////////
-.spinner {
-  width: 40px;
-  height: 40px;
-	border: .2em solid transparent;
-	border-left-color: #ccc;
-	border-right-color: #ccc;
-	border-radius: 50%;
-	animation: 1s loader-02 linear infinite;
-}
-
-@keyframes loader-02 {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
