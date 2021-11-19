@@ -11,8 +11,12 @@ export const Scroll: FC = ({ children }) => {
   useEffect(() => {
     if (!loading && data) {
       setIsAddData(false);
+      // console.log('isAddData =', isAddData, page, loading);
+      // console.log('page =', page);
+      // console.log('totalPages =', data.totalPages);
+      // console.log('data =', data);
     }
-  }, [isAddData]);
+  }, [loading]);
 
   const onScroll = (e: UIEvent<HTMLDivElement>) => {
     const scroll = e.currentTarget;
@@ -23,9 +27,12 @@ export const Scroll: FC = ({ children }) => {
     let scrollHeigh = scroll.scrollHeight;
     if (scrollBottom + offset >= scrollHeigh) {
       // scroll in target
-      if (!isAddData && data && page < data.totalPages) {
+      // console.log('scroll isAddData =', isAddData, page, loading);
+      // console.log('data =', data);
+      if (!isAddData && !loading && data && page < data.totalPages) {
         setIsAddData(true);
         setDataPage(page + 1);
+        // console.log('isAddData =', isAddData, page, loading);
       }
     }
   };

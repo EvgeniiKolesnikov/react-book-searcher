@@ -5,17 +5,25 @@ import './SearchBar.scss';
 
 export const SearchBar: React.FC = () => {
   const [value, setValue] = useState('');
-  const { fetchData, setDataQuery } = useActions();
+  const { fetchData, setDataQuery, setDataPage } = useActions();
   const { query, page } = useTypedSelector((state) => state.data);
 
   useEffect(() => {
-    fetchData(query, page);
+    // setDataPage(1);
+    if (page === 1) fetchData(query, page);
+    console.log('SBQuer q =', query, 'p =', page);
   }, [query]);
+
+  useEffect(() => {
+    if (page > 1) fetchData(query, page);
+    console.log('SBPage q =', query, 'p =', page);
+  }, [page]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
       if (value !== query) {
-        setDataQuery(value);
+        newQuery();
+        // console.log('timer');
       }
     }, 1000);
     return () => {
@@ -25,8 +33,13 @@ export const SearchBar: React.FC = () => {
 
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      setDataQuery(value);
+      newQuery();
     }
+  };
+
+  const newQuery = () => {
+    setDataPage(1);
+    setDataQuery(value);
   };
 
   return (
@@ -53,7 +66,7 @@ export const SearchBar: React.FC = () => {
       <button
         className='input__button'
         id='searchButton'
-        onClick={() => setDataQuery(value)}
+        onClick={() => newQuery()}
       >
         Search
       </button>

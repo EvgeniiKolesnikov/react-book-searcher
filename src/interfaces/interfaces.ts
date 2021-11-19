@@ -37,4 +37,5 @@ export interface IBooksData {
   offset: null;
   q: string;
   start: number;
+  totalPages: number;
 }

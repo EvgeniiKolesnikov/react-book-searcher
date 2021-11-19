@@ -1,12 +1,14 @@
 import { Header, Main } from './layout';
-import { BooksList } from './components';
+import { BooksList, Scroll } from './components';
 
 export const App: React.FC = () => {
   return (
     <>
       <Header />
       <Main>
-        <BooksList />
+        <Scroll>
+          <BooksList />
+        </Scroll>
       </Main>
     </>
   );
