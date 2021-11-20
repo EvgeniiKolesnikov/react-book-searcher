@@ -20,7 +20,7 @@ export const BooksList: React.FC = () => {
       // console.log('query:', query, ',page:', page);
       console.log('data: ', data);
     }
-  }, [loading]);
+  }, [loading, data]);
 
   return (
     <div className='books-list'>
