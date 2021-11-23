@@ -9,21 +9,14 @@ export const SearchBar: React.FC = () => {
   const { query, page } = useTypedSelector((state) => state.data);
 
   useEffect(() => {
-    // setDataPage(1);
-    if (page === 1) fetchData(query, page);
-    console.log('SBQuer q =', query, 'p =', page);
-  }, [query]);
-
-  useEffect(() => {
-    if (page > 1) fetchData(query, page);
-    console.log('SBPage q =', query, 'p =', page);
-  }, [page]);
+    if (page >= 1) fetchData(query, page);
+    // console.log('SB q =', query, 'p =', page);
+  }, [query, page]);
 
   useEffect(() => {
     let timer = setTimeout(() => {
       if (value !== query) {
         newQuery();
-        // console.log('timer');
       }
     }, 1000);
     return () => {
@@ -48,10 +41,10 @@ export const SearchBar: React.FC = () => {
         <input
           className='input__control'
           id='searchInput'
-          placeholder='Search book...'
+          placeholder='Search books...'
           type='search'
           name='search'
-          title='Search books'
+          title='Enter a search query'
           value={value}
           onKeyDown={onKeyDown}
           onChange={(e) => setValue(e.target.value)}
@@ -61,15 +54,16 @@ export const SearchBar: React.FC = () => {
           id='searchClear'
           unselectable='on'
           title='Clear'
+          onClick={() => setValue('')}
+          style={value ? { display: 'block' } : { display: 'none' }}
         ></div>
       </div>
       <button
         className='input__button'
         id='searchButton'
+        title='Start the search'
         onClick={() => newQuery()}
-      >
-        Search
-      </button>
+      ></button>
     </div>
   );
 };
