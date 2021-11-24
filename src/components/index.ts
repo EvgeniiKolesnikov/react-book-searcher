@@ -2,6 +2,7 @@ export * from './SearchBar/SearchBar';
 export * from './Preloader/Preloader';
 export * from './PreloaderMini/PreloaderMini';
 export * from './BooksList/BooksList';
+export * from './BooksListInfo/BooksListInfo';
 export * from './Scroll/Scroll';
 export * from './BookCard/BookCard';
 export * from './Error/Error';

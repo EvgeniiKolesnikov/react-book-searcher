@@ -1,5 +1,12 @@
 import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { BookCard, Error, Preloader, PreloaderMini, ZeroBook } from '..';
+import {
+  BookCard,
+  BooksListInfo,
+  Error,
+  Preloader,
+  PreloaderMini,
+  ZeroBook,
+} from '..';
 
 import './BooksList.scss';
 import { useEffect } from 'react';
@@ -17,7 +24,7 @@ export const BooksList: React.FC = () => {
       data.totalPages = data.num_found
         ? Math.floor(data.num_found / 100) + 1
         : 0;
-      // console.log('query:', query, ',page:', page);
+      console.log('query:', query, ',page:', page);
       console.log('data: ', data);
     }
   }, [loading, data]);
@@ -26,15 +33,18 @@ export const BooksList: React.FC = () => {
     <div className='books-list'>
       {loading && page === 1 && <Preloader />}
       {loading && page > 1 && <PreloaderMini />}
-      {error && <Error error={error} />}
+      {error && <Error />}
       {data?.docs.length === 0 && query && !loading && <ZeroBook />}
 
       {(!loading || page > 1) && (
-        <div className='books-list__container'>
-          {data?.docs.map((book) => (
-            <BookCard {...book} />
-          ))}
-        </div>
+        <>
+          <div className='books-list__container'>
+            {data?.docs.map((book) => (
+              <BookCard {...book} />
+            ))}
+          </div>
+          {query && <BooksListInfo />}
+        </>
       )}
     </div>
   );
