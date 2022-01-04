@@ -1,8 +1,9 @@
-## react-book-searcher - project for Yandex
+## react-knigopoisk - project for Yandex
 
-Open [link](https://evgeniikolesnikov.github.io/react-book-searcher/) to view this project. **(soon)**
+Open [evgeniikolesnikov.github.io/react-knigopoisk](https://evgeniikolesnikov.github.io/react-knigopoisk/) to view deployment.
 
 ### `Задача:`
+
 Необходимо сделать поисковик книг с адаптивной версткой.
 
 ### `Описание:`
@@ -34,4 +35,4 @@ Open [link](https://evgeniikolesnikov.github.io/react-book-searcher/) to view th
 
 API Open Library: https://openlibrary.org/developers/api  
 Search API: https://openlibrary.org/dev/docs/api/search  
-Cover API: https://openlibrary.org/dev/docs/api/covers  
+Cover API: https://openlibrary.org/dev/docs/api/covers
