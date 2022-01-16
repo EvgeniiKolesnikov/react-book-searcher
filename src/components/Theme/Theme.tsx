@@ -1,21 +1,28 @@
 import './Theme.scss';
-import SunLogo from '../../images/sun.png';
-import MoonLogo from '../../images/moon.png';
+import SunIcon from '../../images/sun.png';
+import MoonIcon from '../../images/moon.png';
 import { useState } from 'react';
+import ThemeService from '../../services/ThemeService';
 
 export const Theme: React.FC = () => {
-  const [icon, setIcon] = useState('sun');
+  const [icon, setIcon] = useState(ThemeService.loadTheme());
 
   const changeTheme = () => {
-    icon === 'sun' ? setIcon('moon') : setIcon('sun');
-    // console.log('icon', icon);
+    ThemeService.toggleTheme();
+    setIcon(ThemeService.loadTheme());
   };
 
   return (
-    <div className='theme' onClick={changeTheme} title='Change color theme'>
+    <div
+      className='theme'
+      onClick={changeTheme}
+      title={`Тема: ${
+        icon === 'sun' ? 'светлый день в Я.Доставке' : 'тёмная ночь в Я.Такси'
+      }`}
+    >
       <div className={`theme__icon ${icon}`}>
-        <img className='theme__img' src={SunLogo} alt='SunLogo' />
-        <img className='theme__img' src={MoonLogo} alt='MoonLogo' />
+        <img className='theme__img' src={SunIcon} alt='sun' />
+        <img className='theme__img' src={MoonIcon} alt='moon' />
       </div>
     </div>
   );
