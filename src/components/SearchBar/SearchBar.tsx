@@ -41,10 +41,10 @@ export const SearchBar: React.FC = () => {
         <input
           className='input__control'
           id='searchInput'
-          placeholder='Search books...'
+          placeholder='. . .'
           type='search'
           name='search'
-          title='Enter a search query'
+          title='Введите запрос'
           value={value}
           onKeyDown={onKeyDown}
           onChange={(e) => setValue(e.target.value)}
@@ -53,7 +53,7 @@ export const SearchBar: React.FC = () => {
           className='input__clear'
           id='searchClear'
           unselectable='on'
-          title='Clear'
+          title='Очистить'
           onClick={() => setValue('')}
           style={value ? { display: 'block' } : { display: 'none' }}
         ></div>
@@ -61,7 +61,6 @@ export const SearchBar: React.FC = () => {
       <button
         className='input__button'
         id='searchButton'
-        title='Start the search'
         onClick={() => newQuery()}
       ></button>
     </div>

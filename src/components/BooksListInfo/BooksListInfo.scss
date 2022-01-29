@@ -2,16 +2,17 @@
   height: 25px;
   width: 100%;
   max-width: 700px;
-  // background-color: var(--body);
-  -webkit-box-shadow: 0px -11px 20px -9px rgba(141, 141, 141, 0.5);
-  -moz-box-shadow: 0px -11px 20px -9px rgba(141, 141, 141, 0.5);
-  box-shadow: 0px -11px 20px -9px rgba(141, 141, 141, 0.5);
+  background-color: var(--body);
+  box-shadow: 0px -9px 13px -10px rgba(141, 141, 141, 0.8);
+  -webkit-box-shadow: 0px -9px 13px -10px rgba(141, 141, 141, 0.8);
+  -moz-box-shadow: 0px -9px 13px -10px rgba(141, 141, 141, 0.8);
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
   bottom: 0;
+  z-index: 1;
   &__title {
     font-size: small;
     color: #9b9b9b;

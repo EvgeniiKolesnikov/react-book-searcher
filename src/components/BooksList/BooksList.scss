@@ -1,27 +1,24 @@
 .books-list {
-  padding: 0 10px;
+  padding: 0 10px 0 10px;
   width: 100%;
   max-width: 720px;
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
-    grid-gap: 1.1rem;
+    grid-gap: 1rem;
     justify-content: space-between;
-    margin-top: 10px;
-  }
-  @media screen and (max-width:740px) {
-    max-width: 640px;
-  }
-  @media screen and (max-width:640px) {
-    max-width: 540px;
-  }
-  @media screen and (max-width:480px) {
-    max-width: 420px;
-  }
-  @media screen and (max-width:364px) {
-    max-width: 260px;
-  }
-  @media screen and (max-width:250px) {
-    max-width: 220px;
+    margin: 10px 0 0 0;
+    @media screen and (max-width:730px) {
+      justify-content: space-evenly;
+      margin: 10px 6px 0 0
+    }
+    @media screen and (max-width:364px) {
+      margin: 10px 15px 0 10px;
+    }
+    @media screen and (max-width: 270px) {
+      justify-items: center;
+      justify-content: center;
+      grid-gap: 1.2rem;
+    }
   }
 }

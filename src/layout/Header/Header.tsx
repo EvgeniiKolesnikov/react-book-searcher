@@ -6,9 +6,9 @@ export const Header: React.FC = () => {
     <header className='header'>
       <div className='header__container'>
         <Logo />
-        <div className='header__title'>Book Searcher</div>
-        <Theme />
+        <div className='header__title'>книгопоиск</div>
         <SearchBar />
+        <Theme />
       </div>
     </header>
   );
