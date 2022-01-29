@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-knigopoisk/static/css/main.2c827eba.chunk.css",
-    "main.js": "/react-knigopoisk/static/js/main.5d3dffdf.chunk.js",
-    "main.js.map": "/react-knigopoisk/static/js/main.5d3dffdf.chunk.js.map",
-    "runtime-main.js": "/react-knigopoisk/static/js/runtime-main.4ed7c490.js",
-    "runtime-main.js.map": "/react-knigopoisk/static/js/runtime-main.4ed7c490.js.map",
-    "static/js/2.2336bf11.chunk.js": "/react-knigopoisk/static/js/2.2336bf11.chunk.js",
-    "static/js/2.2336bf11.chunk.js.map": "/react-knigopoisk/static/js/2.2336bf11.chunk.js.map",
+    "main.css": "/react-knigopoisk/static/css/main.a9b9a6a0.chunk.css",
+    "main.js": "/react-knigopoisk/static/js/main.588bf256.chunk.js",
+    "main.js.map": "/react-knigopoisk/static/js/main.588bf256.chunk.js.map",
+    "runtime-main.js": "/react-knigopoisk/static/js/runtime-main.037a3486.js",
+    "runtime-main.js.map": "/react-knigopoisk/static/js/runtime-main.037a3486.js.map",
+    "static/js/2.f0c6f3d2.chunk.js": "/react-knigopoisk/static/js/2.f0c6f3d2.chunk.js",
+    "static/js/2.f0c6f3d2.chunk.js.map": "/react-knigopoisk/static/js/2.f0c6f3d2.chunk.js.map",
     "index.html": "/react-knigopoisk/index.html",
-    "static/css/main.2c827eba.chunk.css.map": "/react-knigopoisk/static/css/main.2c827eba.chunk.css.map",
-    "static/js/2.2336bf11.chunk.js.LICENSE.txt": "/react-knigopoisk/static/js/2.2336bf11.chunk.js.LICENSE.txt",
-    "static/media/SearchBar.scss": "/react-knigopoisk/static/media/icon_search.0bdf0726.svg",
-    "static/media/logo.3c3a8db8.png": "/react-knigopoisk/static/media/logo.3c3a8db8.png",
+    "static/css/main.a9b9a6a0.chunk.css.map": "/react-knigopoisk/static/css/main.a9b9a6a0.chunk.css.map",
+    "static/js/2.f0c6f3d2.chunk.js.LICENSE.txt": "/react-knigopoisk/static/js/2.f0c6f3d2.chunk.js.LICENSE.txt",
+    "static/media/SearchBar.scss": "/react-knigopoisk/static/media/icon_search2.1ff22649.svg",
+    "static/media/logo.8516c8eb.png": "/react-knigopoisk/static/media/logo.8516c8eb.png",
     "static/media/skin.ae72d0eb.png": "/react-knigopoisk/static/media/skin.ae72d0eb.png",
     "static/media/sun.d4bd2412.png": "/react-knigopoisk/static/media/sun.d4bd2412.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ed7c490.js",
-    "static/js/2.2336bf11.chunk.js",
-    "static/css/main.2c827eba.chunk.css",
-    "static/js/main.5d3dffdf.chunk.js"
+    "static/js/runtime-main.037a3486.js",
+    "static/js/2.f0c6f3d2.chunk.js",
+    "static/css/main.a9b9a6a0.chunk.css",
+    "static/js/main.588bf256.chunk.js"
   ]
 }
