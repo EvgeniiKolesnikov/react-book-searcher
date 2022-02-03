@@ -1,0 +1,14 @@
+.logoText {
+  grid-area: logoText;
+  height: 18px;
+  opacity: .7;
+  &__img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+    pointer-events: none;
+    user-select: none;
+    text-align: center;
+  }
+}
+

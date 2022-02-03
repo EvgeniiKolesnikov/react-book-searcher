@@ -1,4 +1,4 @@
-import { Logo, SearchBar, Theme } from '../../components';
+import { Logo, LogoText, SearchBar, Theme } from '../../components';
 import './Header.scss';
 
 export const Header: React.FC = () => {
@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
     <header className='header'>
       <div className='header__container'>
         <Logo />
-        <div className='header__title'>книгопоиск</div>
+        <LogoText />
         <SearchBar />
         <Theme />
       </div>

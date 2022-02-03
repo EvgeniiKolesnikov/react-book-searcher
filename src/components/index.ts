@@ -8,4 +8,5 @@ export * from './BookCard/BookCard';
 export * from './Error/Error';
 export * from './Theme/Theme';
 export * from './Logo/Logo';
+export * from './LogoText/LogoText';
 export * from './ZeroBook/ZeroBook';

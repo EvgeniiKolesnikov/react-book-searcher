@@ -31,6 +31,7 @@ export const SearchBar: React.FC = () => {
   };
 
   const newQuery = () => {
+    document.getElementById('searchInput')?.focus();
     setDataPage(1);
     setDataQuery(value);
   };
@@ -53,16 +54,16 @@ export const SearchBar: React.FC = () => {
           className='input__clear'
           id='searchClear'
           unselectable='on'
-          title='Очистить'
+          // title='Очистить'
           onClick={() => setValue('')}
           style={value ? { display: 'block' } : { display: 'none' }}
         ></div>
+        <button
+          className='input__button'
+          id='searchButton'
+          onClick={() => newQuery()}
+        ></button>
       </div>
-      <button
-        className='input__button'
-        id='searchButton'
-        onClick={() => newQuery()}
-      ></button>
     </div>
   );
 };

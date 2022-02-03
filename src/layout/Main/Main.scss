@@ -1,7 +1,12 @@
+@import '../../styles/variables.scss';
+
 .main {
-  padding-top: 3rem;
+  padding-top: 48px;
   &__container {
     height: 100%;
     display: flex;
+  }
+  @media screen and (max-width: $mobile-display) { 
+    padding-top: 74px;
   }
 }

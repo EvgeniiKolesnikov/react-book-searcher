@@ -1,12 +1,14 @@
 .theme {
-  flex-shrink: 0;
-  border-radius: 5px;
-  border: 1px solid var(--theme-button-border);
+  grid-area: theme;
+  width: 34px;
+  opacity: 0.55;
+  // border-bottom: 1px solid var(--theme-button-border);
   cursor: pointer;
   overflow: hidden;
   // filter: opacity(50%);
   &:hover {
-    border: 1px solid var(--theme-button-border-hover);
+    opacity: 0.8;
+    // border-bottom: 1px solid var(--theme-button-border-hover);
   }
   &__img {
     width: 32px;
