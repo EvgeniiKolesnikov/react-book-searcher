@@ -1,4 +1,4 @@
-export interface IBookCard {
+export interface IBook {
   author_name?: string[];
   cover_edition_key: string;
   cover_i?: number;
@@ -7,7 +7,6 @@ export interface IBookCard {
   edition_key: string[];
   first_publish_year: number;
   has_fulltext: boolean;
-  id?: string;
   isbn?: string[];
   key: string;
   last_modified_i: number;
@@ -25,12 +24,8 @@ export interface IBookCard {
   type: string;
 }
 
-export interface IBooksList {
-  booksList: IBookCard[];
-}
-
 export interface IBooksData {
-  docs: IBookCard[];
+  docs: IBook[];
   numFound: number;
   numFoundExact: boolean;
   num_found: number;
@@ -38,4 +33,7 @@ export interface IBooksData {
   q: string;
   start: number;
   totalPages: number;
+}
+export interface IBookCard {
+  book: IBook;
 }

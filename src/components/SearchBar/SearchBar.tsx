@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
@@ -6,18 +7,26 @@ import './SearchBar.scss';
 export const SearchBar: React.FC = () => {
   const [value, setValue] = useState('');
   const { fetchData, setDataQuery, setDataPage } = useActions();
-  const { query, page } = useTypedSelector((state) => state.data);
+  const { query, page, data, loading } = useTypedSelector(
+    (state) => state.data
+  );
+  // console.log('render BAR', value, query, page, loading);
 
+  // load/add new page
   useEffect(() => {
+    // console.log('ef(query, page)', loading);
     if (page >= 1) fetchData(query, page);
-    // console.log('SB q =', query, 'p =', page);
+    console.log(`query = ${query}, page = ${page}, load new page, ${loading}`);
+    // console.log(data);
   }, [query, page]);
 
+  // debouce. Autoload the first page after 1 sec.
   useEffect(() => {
-    let timer = setTimeout(() => {
-      if (value !== query) {
-        newQuery();
-      }
+    // console.log('ef(timer)', loading);
+    const timer = setTimeout(() => {
+      // console.log('ef(updateQuery timer on)', loading);
+      updateQuery();
+      // console.log('ef(updateQuery timer off)', loading);
     }, 1000);
     return () => {
       clearTimeout(timer);
@@ -25,15 +34,20 @@ export const SearchBar: React.FC = () => {
   }, [value]);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
+    // console.log('onKeyDown');
     if (e.key === 'Enter') {
-      newQuery();
+      // console.log('updateQuery onKeyDown', loading);
+      updateQuery();
     }
   };
 
-  const newQuery = () => {
-    document.getElementById('searchInput')?.focus();
-    setDataPage(1);
-    setDataQuery(value);
+  const updateQuery = () => {
+    // console.log('updateQuery in', loading);
+    !value && document.getElementById('searchInput')?.focus();
+    if (value !== query) {
+      setDataPage(1);
+      setDataQuery(value);
+    }
   };
 
   return (
@@ -54,15 +68,14 @@ export const SearchBar: React.FC = () => {
           className='input__clear'
           id='searchClear'
           unselectable='on'
-          // title='Очистить'
           onClick={() => setValue('')}
           style={value ? { display: 'block' } : { display: 'none' }}
-        ></div>
+        />
         <button
           className='input__button'
           id='searchButton'
-          onClick={() => newQuery()}
-        ></button>
+          onClick={() => updateQuery()}
+        />
       </div>
     </div>
   );

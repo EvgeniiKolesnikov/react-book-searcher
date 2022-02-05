@@ -16,34 +16,36 @@ export const BooksList: React.FC = () => {
     (state) => state.data
   );
 
+  // set data.totalPages field
   useEffect(() => {
+    // console.log('ef(data)', loading);
     if (!loading && data) {
-      data.docs.forEach((item) => {
-        item.id = item.key.split('/').pop();
-      });
       data.totalPages = data.num_found
         ? Math.floor(data.num_found / 100) + 1
         : 0;
-      console.log('query:', query, ',page:', page);
-      console.log('data: ', data);
+      console.log(
+        `query = ${query}, page = ${page}, totalPages = ${data.totalPages}`
+      );
+      console.log(data);
     }
-  }, [loading, data]);
+  }, [data, loading]);
 
+  // console.log('render BooksList', loading, error, query, page);
+  
   return (
     <div className='books-list'>
       {loading && page === 1 && <Preloader />}
       {loading && page > 1 && <PreloaderMini />}
       {error && <Error />}
-      {data?.docs.length === 0 && query && !loading && <ZeroBook />}
-
+      {data?.docs.length === 0 && data.q && !loading && <ZeroBook />}
       {(!loading || page > 1) && (
         <>
           <div className='books-list__container'>
             {data?.docs.map((book) => (
-              <BookCard {...book} />
+              <BookCard key={book.key} book={book} />
             ))}
           </div>
-          {query && <BooksListInfo />}
+          {data && <BooksListInfo />}
         </>
       )}
     </div>
