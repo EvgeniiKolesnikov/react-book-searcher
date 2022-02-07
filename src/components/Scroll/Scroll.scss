@@ -6,8 +6,9 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  overflow: overlay;
-  position: relative;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  // position: relative;
   @media screen and (max-width: $mobile-display) { 
     height: calc(100vh - 99px);
   }
