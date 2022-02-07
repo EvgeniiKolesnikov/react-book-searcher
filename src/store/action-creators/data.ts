@@ -6,7 +6,7 @@ import { DataAction, DataActionTypes } from '../types/data';
 // declare an ajax request's cancelToken (globally)
 let ajaxRequest: CancelTokenSource | null = null;
 
-export const fetchData = (query = '', page = 1) => {
+export const fetchData = (query = '', page = 0) => {
   const url = 'https://openlibrary.org/search.json';
   return async (dispatch: Dispatch<DataAction>) => {
     try {

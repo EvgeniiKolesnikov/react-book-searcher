@@ -5,7 +5,7 @@ const initialState: IDataState = {
   data: null,
   loading: false,
   error: null,
-  page: 1,
+  page: 0,
   query: '',
 };
 
