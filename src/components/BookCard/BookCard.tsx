@@ -4,7 +4,7 @@ import './BookCard.scss';
 import React from 'react';
 
 export const BookCard: React.FC<IBookCard> = React.memo(({ book }): JSX.Element => {
-  const { key, author_name, cover_i, isbn, title } =
+  const { author_name, cover_i, isbn, title } =
     book;
   // console.log('render BookCard', key);
   return (

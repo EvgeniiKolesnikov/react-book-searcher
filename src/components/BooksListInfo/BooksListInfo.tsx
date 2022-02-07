@@ -16,7 +16,7 @@ export const BooksListInfo: React.FC = (): JSX.Element => {
   return (
     <div className='books-list-info'>
       <div className='books-list-info__title'>
-        showing books {showingBooks} / {data?.numFound}
+        показано книг {showingBooks} / {data?.numFound}
       </div>
     </div>
   );
