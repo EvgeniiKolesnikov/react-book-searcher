@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-knigopoisk/static/css/main.1e8b11ec.chunk.css",
-    "main.js": "/react-knigopoisk/static/js/main.bbf0a565.chunk.js",
-    "main.js.map": "/react-knigopoisk/static/js/main.bbf0a565.chunk.js.map",
+    "main.css": "/react-knigopoisk/static/css/main.8365e5cf.chunk.css",
+    "main.js": "/react-knigopoisk/static/js/main.a3755fd2.chunk.js",
+    "main.js.map": "/react-knigopoisk/static/js/main.a3755fd2.chunk.js.map",
     "runtime-main.js": "/react-knigopoisk/static/js/runtime-main.037a3486.js",
     "runtime-main.js.map": "/react-knigopoisk/static/js/runtime-main.037a3486.js.map",
     "static/js/2.73786541.chunk.js": "/react-knigopoisk/static/js/2.73786541.chunk.js",
     "static/js/2.73786541.chunk.js.map": "/react-knigopoisk/static/js/2.73786541.chunk.js.map",
     "index.html": "/react-knigopoisk/index.html",
-    "static/css/main.1e8b11ec.chunk.css.map": "/react-knigopoisk/static/css/main.1e8b11ec.chunk.css.map",
+    "static/css/main.8365e5cf.chunk.css.map": "/react-knigopoisk/static/css/main.8365e5cf.chunk.css.map",
     "static/js/2.73786541.chunk.js.LICENSE.txt": "/react-knigopoisk/static/js/2.73786541.chunk.js.LICENSE.txt",
     "static/media/book_cover.ae72d0eb.png": "/react-knigopoisk/static/media/book_cover.ae72d0eb.png",
     "static/media/SearchBar.scss": "/react-knigopoisk/static/media/icon_search2.1ff22649.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.037a3486.js",
     "static/js/2.73786541.chunk.js",
-    "static/css/main.1e8b11ec.chunk.css",
-    "static/js/main.bbf0a565.chunk.js"
+    "static/css/main.8365e5cf.chunk.css",
+    "static/js/main.a3755fd2.chunk.js"
   ]
 }
