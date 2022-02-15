@@ -1,5 +1,6 @@
 import { Header, Main } from './layout';
 import {
+  BookModal,
   BooksList,
   Logo,
   LogoText,
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
           <BooksList />
         </Scroll>
       </Main>
+      <BookModal />
     </>
   );
 };

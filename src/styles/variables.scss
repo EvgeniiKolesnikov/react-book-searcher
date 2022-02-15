@@ -32,6 +32,11 @@ $mobile-display: 540px;
   --book-card__title--hover: #bd1717;
   --book-card__author: #bbbbbb;
   --book-card__author--hover: #cfcfcf;
+
+  --book-details-bg: #00000080;
+  --book-details__title: #d3a44b;
+  --book-details__author: #b3b3b3;
+  --book-details__publish_year: #7d7d7d;
 }
 
 :root[theme='moon'] {
@@ -40,7 +45,7 @@ $mobile-display: 540px;
   --text: #999;
 
   --preloader: #9b6d00;
-  --preloader-mini:#9b6d00;
+  --preloader-mini: #9b6d00;
   --header: #222;
   --theme-button-border: #444444;
   --theme-button-border-hover: #4e4e4e;
@@ -68,4 +73,9 @@ $mobile-display: 540px;
   --book-card__author--hover: #898989;
   --book-card__author: #898989;
   --book-card__author--hover: #787878;
+
+  --book-details-bg: #1b1b1bab;
+  --book-details__title: #d3a44b;
+  --book-details__author: #b3b3b3;
+  --book-details__publish_year: #7d7d7d;
 }

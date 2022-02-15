@@ -1,0 +1,85 @@
+.book-details {
+  width: 400px;
+  height: auto;
+  max-width: 80vw;
+  max-height: 97vh;
+  z-index: 3;
+  background-color: var(--book-details-bg);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  pointer-events: all;
+  // @media screen and (max-width: 364px) {
+  //   width: auto;
+  //   height: auto;
+  // }
+  // @media screen and (max-width: 270px) {
+  //   width: auto;
+  //   height: auto;
+  // }
+}
+
+.book-details__img-container {
+  height: auto;
+  min-width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;  
+  @media screen and (max-width: 364px) {
+    height: auto;
+  }
+}
+
+.book-details__img {
+  pointer-events: none;
+  // height: auto;
+  width: 400px;
+  max-width: 80vw;
+  max-height: 80vh;
+  // border-top-left-radius: 5px;
+  // border-top-right-radius: 5px;
+  overflow: auto;
+}
+
+.book-details__description {
+  pointer-events: none;
+  margin: 7px;
+}
+
+
+.book-details__title {
+  margin: 0px 0px 2px 0px;
+  pointer-events: none;
+  max-height: 75px;
+  max-height: 110px;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 400;
+  word-break: break-all;
+  color: var(--book-details__title);
+}
+
+.book-details__author {
+  margin: 0px 0px 2px 0px;
+  pointer-events: none;
+  max-height: 50px;
+  overflow: hidden;
+  font-size: 14px;
+  color: var(--book-details__author);
+}
+
+.book-details__publish_year {
+  color: var(--book-details__publish_year);
+  font-size: 12px;
+}

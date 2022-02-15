@@ -29,7 +29,7 @@ export const BooksList: React.FC = () => {
     }
   }, [data, loading]);
 
-  // console.log(`render LIST> p=${page}, l=${loading}, q=${query}, v=${'value'}`);
+  // console.log(`render LIST> p=${page}, l=${loading}`);
 
   return (
     <div className='books-list  unselectable' unselectable='on'>

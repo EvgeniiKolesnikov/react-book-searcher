@@ -5,6 +5,8 @@ export * from './BooksList/BooksList';
 export * from './BooksListInfo/BooksListInfo';
 export * from './Scroll/Scroll';
 export * from './BookCard/BookCard';
+export * from './BookDetails/BookDetails';
+export * from './BookModal/BookModal';
 export * from './Error/Error';
 export * from './Theme/Theme';
 export * from './Logo/Logo';
