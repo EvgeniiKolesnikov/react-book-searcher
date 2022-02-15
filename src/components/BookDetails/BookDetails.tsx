@@ -4,7 +4,8 @@ import './BookDetails.scss';
 import React from 'react';
 
 export const BookDetails: React.FC<IBookCard> = ({ book }): JSX.Element => {
-  const { author_name, cover_i, isbn, title, first_publish_year } = book;
+  const { author_name, cover_i, isbn, title, first_publish_year, publisher } =
+    book;
 
   console.log('render BookDetails');
 
@@ -31,15 +32,22 @@ export const BookDetails: React.FC<IBookCard> = ({ book }): JSX.Element => {
         />
       </div>
       <div className='book-details__description'>
-        {/* <div className='book-details__name'>Название:</div>{' '} */}
-        <div className='book-details__title'>{title}</div>
+        {title && <div className='book-details__title'>{title}</div>}
         {author_name && (
           <div className='book-details__author'>{author_name.join(', ')}</div>
         )}
         {first_publish_year && (
-          <div className='book-details__publish_year'>
+          <div className='book-details__other'>
             Первая публикация: {first_publish_year} г.
           </div>
+        )}
+        {publisher && (
+          <div className='book-details__other'>
+            Издатель: {publisher.join(', ')}
+          </div>
+        )}
+        {isbn && (
+          <div className='book-details__other'>ISBN: {isbn.join(', ')}</div>
         )}
       </div>
     </div>

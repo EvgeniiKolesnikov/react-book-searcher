@@ -36,7 +36,7 @@ $mobile-display: 540px;
   --book-details-bg: #00000080;
   --book-details__title: #d3a44b;
   --book-details__author: #b3b3b3;
-  --book-details__publish_year: #7d7d7d;
+  --book-details__other: #7d7d7d;
 }
 
 :root[theme='moon'] {
@@ -77,5 +77,5 @@ $mobile-display: 540px;
   --book-details-bg: #1b1b1bab;
   --book-details__title: #d3a44b;
   --book-details__author: #b3b3b3;
-  --book-details__publish_year: #7d7d7d;
+  --book-details__other: #7d7d7d;
 }
