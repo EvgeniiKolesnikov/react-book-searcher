@@ -12,32 +12,29 @@
   flex-wrap: nowrap;
   flex-direction: column;
   pointer-events: all;
-  // @media screen and (max-width: 364px) {
-  //   width: auto;
-  //   height: auto;
-  // }
-  // @media screen and (max-width: 270px) {
-  //   width: auto;
-  //   height: auto;
-  // }
+  @media screen and (min-width: 450px) and (max-height: 700px) {
+    flex-direction: row;
+    width: auto;
+    max-width: 600px;
+  }
 }
 
 .book-details__img-container {
-  height: auto;
   min-width: 300px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content: center;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Chrome/Safari/Opera */
   -khtml-user-select: none; /* Konqueror */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
-  @media screen and (max-width: 364px) {
-    height: auto;
+  @media screen and (min-width: 450px) and (max-height: 700px) {
+    min-width: 200px;
+  }
+  @media screen and (max-width: 449px) {
+    min-width: auto;
   }
 }
 
@@ -47,22 +44,27 @@
   max-width: 80vw;
   max-height: 80vh;
   overflow: auto;
+  @media screen and (min-width: 450px) and (max-height: 700px) {
+    width: 100%;
+  }
 }
 
 .book-details__description {
   pointer-events: none;
   margin: 7px;
+  // @media screen and (min-width: 450px) and (max-height: 700px) {
+  //   min-width: 200px;
+  // }
 }
 
 .book-details__title {
   margin: 0px 0px 2px 0px;
   pointer-events: none;
-  max-height: 75px;
   max-height: 110px;
   overflow: hidden;
   font-size: 15px;
   font-weight: 400;
-  word-break: break-all;
+  // word-break: break-all;
   color: var(--book-details__title);
 }
 
@@ -79,4 +81,6 @@
   color: var(--book-details__other);
   margin-top: 5px;
   font-size: 12px;
+  overflow: hidden;
+  max-height: 100px;
 }
