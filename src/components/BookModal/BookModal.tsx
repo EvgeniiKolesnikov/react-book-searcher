@@ -16,7 +16,7 @@ export const BookModal: React.FC = (): JSX.Element => {
   console.log('render BookModal');
 
   return (
-    <aside
+    <section
       className={`book-modal ${isSelected ? '' : 'hidden'}`}
       onClick={clickHandler}
     >
@@ -26,6 +26,6 @@ export const BookModal: React.FC = (): JSX.Element => {
         </div>
         {selectedBook && <BookDetails book={selectedBook} />}
       </div>
-    </aside>
+    </section>
   );
 };

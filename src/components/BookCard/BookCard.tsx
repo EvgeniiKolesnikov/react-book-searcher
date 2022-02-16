@@ -14,7 +14,7 @@ export const BookCard: React.FC<IBookCard> = React.memo(
     };
 
     return (
-      <div className='book-card' onClick={clickHandler}>
+      <article className='book-card' onClick={clickHandler}>
         <div className='book-card__img-container'>
           <img
             className='book-card__img'
@@ -38,7 +38,7 @@ export const BookCard: React.FC<IBookCard> = React.memo(
             <div className='book-card__author'>{author_name.join(', ')}</div>
           )}
         </div>
-      </div>
+      </article>
     );
   }
 );

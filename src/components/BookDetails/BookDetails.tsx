@@ -10,7 +10,7 @@ export const BookDetails: React.FC<IBookCard> = ({ book }): JSX.Element => {
   console.log('render BookDetails');
 
   return (
-    <div className='book-details' onClick={(e) => e.stopPropagation()}>
+    <article className='book-details' onClick={(e) => e.stopPropagation()}>
       <div
         className='book-details__img-container unselectable'
         unselectable='on'
@@ -50,6 +50,6 @@ export const BookDetails: React.FC<IBookCard> = ({ book }): JSX.Element => {
           <div className='book-details__other'>ISBN: {isbn.join(', ')}</div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
