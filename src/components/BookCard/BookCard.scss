@@ -42,7 +42,10 @@
   -moz-user-select: none;      /* Firefox */
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;  
-  @media screen and (max-width: 364px) {
+  @media screen and (max-width: 380px) {
+    height: 135px;
+  }
+  @media screen and (max-width: 339px) {
     height: auto;
   }
 }
