@@ -11,10 +11,6 @@ export const Scroll: FC = ({ children }) => {
   useEffect(() => {
     if (!loading && data) {
       setIsAddData(false);
-      // console.log('isAddData =', isAddData, page, loading);
-      // console.log('page =', page);
-      // console.log('totalPages =', data.totalPages);
-      // console.log('data =', data);
     }
   }, [loading]);
 
@@ -27,12 +23,9 @@ export const Scroll: FC = ({ children }) => {
     let scrollHeigh = scroll.scrollHeight;
     if (scrollBottom + offset >= scrollHeigh) {
       // scroll in target
-      // console.log('scroll isAddData =', isAddData, page, loading);
-      // console.log('data =', data);
       if (!isAddData && !loading && data && page < data.totalPages) {
         setIsAddData(true);
         setDataPage(page + 1);
-        // console.log('isAddData =', isAddData, page, loading);
       }
     }
   };

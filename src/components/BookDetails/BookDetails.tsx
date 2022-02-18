@@ -7,8 +7,6 @@ export const BookDetails: React.FC<IBookCard> = ({ book }): JSX.Element => {
   const { author_name, cover_i, isbn, title, first_publish_year, publisher } =
     book;
 
-  console.log('render BookDetails');
-
   return (
     <article className='book-details' onClick={(e) => e.stopPropagation()}>
       <div

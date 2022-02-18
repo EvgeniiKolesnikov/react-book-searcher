@@ -13,7 +13,6 @@ export const SearchBar: React.FC = () => {
   // load/add new page
   useEffect(() => {
     if (page >= 1) fetchData(query, page);
-    // console.log(`load page p=${page}, l=${loading}, q=${query}, v=${value}`);
   }, [query, page]);
 
   // debouce. Autoload the first page after 1 sec.
@@ -42,8 +41,6 @@ export const SearchBar: React.FC = () => {
     setValue('');
     inputRef.current?.focus();
   };
-
-  // console.log(`render BAR > p=${page}, l=${loading}, q=${query}, v=${value}`);
 
   return (
     <div className='input'>

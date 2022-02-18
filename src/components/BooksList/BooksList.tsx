@@ -22,14 +22,9 @@ export const BooksList: React.FC = () => {
       data.totalPages = data.num_found
         ? Math.floor(data.num_found / 100) + 1
         : 0;
-      // console.log(
-      //   `query = ${query}, page = ${page}, totalPages = ${data.totalPages}`
-      // );
       console.log(data);
     }
   }, [data, loading]);
-
-  // console.log(`render LIST> p=${page}, l=${loading}`);
 
   return (
     <div className='books-list  unselectable' unselectable='on'>

@@ -28,7 +28,7 @@ export const fetchData = (query = '', page = 0) => {
       });
     } catch (error) {
       if (axios.isCancel(error)) {
-        // console.log(`Previous request canceled, new request is send`);
+        // Previous request canceled, new request is send
       } else {
         dispatch({
           type: DataActionTypes.FETCH_DATA_ERROR,

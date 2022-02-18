@@ -10,10 +10,7 @@ export const BookModal: React.FC = (): JSX.Element => {
 
   const clickHandler = () => {
     deselectBook();
-    console.log('deselectBook, close modal');
   };
-
-  console.log('render BookModal');
 
   return (
     <section
