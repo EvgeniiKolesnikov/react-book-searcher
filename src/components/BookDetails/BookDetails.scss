@@ -52,17 +52,24 @@
 .book-details__description {
   pointer-events: none;
   margin: 7px;
+  @media screen and (min-width: 450px) and (max-height: 720px) {
+    margin-top: 4px;
+  }
 }
 
 .book-details__title {
   margin: 0px 0px 2px 0px;
-  padding-top: 1px;
+  padding-top: 3px;
   pointer-events: none;
   max-height: 110px;
   overflow: hidden;
   font-size: 15px;
   font-weight: 400;
   color: var(--book-details__title);
+  @media screen and (min-width: 450px) and (max-height: 720px) {
+    margin: 0px 18px 2px 0px;
+    word-break: break-all;
+  }
 }
 
 .book-details__author {
