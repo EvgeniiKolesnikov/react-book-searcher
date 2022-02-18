@@ -33,7 +33,7 @@ export const BookCard: React.FC<IBookCard> = React.memo(
           />
         </div>
         <div className='book-card__description'>
-          <div className='book-card__title'>{title}</div>
+          {title && <div className='book-card__title'>{title}</div>}
           {author_name && (
             <div className='book-card__author'>{author_name.join(', ')}</div>
           )}
